@@ -56,6 +56,12 @@ There are two things you can do about this warning:
 (define-key evil-motion-state-map (kbd "C-e") nil)
 (define-key evil-visual-state-map (kbd "C-c") 'evil-exit-visual-state)
 
+;; Leader-like functionality using ,(comma)
+;; =============================================================================
+;; Binding some of the same keys I use with (neo)vim.
+(require 'neotree)
+(define-key evil-normal-state-map (kbd ",n") 'neotree-toggle)
+
 ;; Some modes to not start in normal mode
 (cl-loop for (mode . state)
       in '((inferior-emacs-lisp-mode . emacs)
@@ -79,3 +85,24 @@ There are two things you can do about this warning:
 
 (require 'powerline)
 (powerline-center-evil-theme)
+
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(default ((t (:family "DejaVu Sans Mono" :foundry "PfEd" :slant normal :weight normal :height 121 :width normal)))))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(column-number-mode t)
+ '(custom-enabled-themes (quote (cyberpunk)))
+ '(custom-safe-themes
+   (quote
+    ("59e82a683db7129c0142b4b5a35dbbeaf8e01a4b81588f8c163bd255b76f4d21" default)))
+ '(package-selected-packages
+   (quote
+    (neotree yaml-mode powerline powershell go-mode slime markdown-mode magit json-mode js2-mode evil elpy cyberpunk-theme clojure-mode ace-window)))
+ '(tool-bar-mode nil))
