@@ -1,3 +1,8 @@
+;; Load custom emacs code
+(load "~/.emacs.d/snippets/xah.el")
+;; Global keys for some useful xah commands
+(global-set-key (kbd "<f8>") 'xah-open-file-fast)
+
 ;; Unicode
 (prefer-coding-system 'utf-8-unix)
 
@@ -61,6 +66,9 @@ There are two things you can do about this warning:
 ;; Binding some of the same keys I use with (neo)vim.
 (require 'neotree)
 (define-key evil-normal-state-map (kbd ",n") 'neotree-toggle)
+;; Bookmarks
+(define-key evil-normal-state-map (kbd ",rb") 'bookmark-jump)
+(define-key evil-normal-state-map (kbd ",rm") 'bookmark-set)
 
 ;; Some modes to not start in normal mode
 (cl-loop for (mode . state)
