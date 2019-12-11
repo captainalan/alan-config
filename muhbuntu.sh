@@ -9,9 +9,12 @@ fi
 
 # Link emacs config here
 if [ ! -f $HOME/.emacs.d/init.el  ]; then
-	echo "Gotta setup emacs"
-	# ln ./.emacs.d/init.el ~/.emacs.d/init.el
-	# TODO add option to replace existing emacs init file
+	echo "Setting up emacs stuff"
+	ln $THIS_DIR/.emacs.d/init.el ~/.emacs.d/init.el
+	if [ ! -d $HOME/.emacs.d/snippets ]; then
+		ln -s $THIS_DIR/.emacs.d/snippets ~/.emacs.d/
+	fi
+	# Add codes to automatically update packages, download things
 fi
 
 
