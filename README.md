@@ -13,8 +13,22 @@ projects (Lubuntu, Xubuntu, etc.).
 
 For now I am just manually
 [linking](https://www.howtogeek.com/howto/16226/complete-guide-to-symbolic-links-symlinks-on-windows-or-linux/)
-the relevant files. Automating later will probably require running a PowerShell
-with some admin privileges.
+the relevant files. Automating later will probably require running a
+PowerShell with some admin privileges. More info on making links
+[here](https://winaero.com/blog/create-symbolic-link-windows-10-powershell/).
+
+From an elevated powershell do,
+
+```powershell
+New-Item -ItemType SymbolicLink -Path "Link" -Target "Target"
+```
+
+where the "Target" items are config files here and the targets are the
+places apps (like emacs) will read from and the "Path" is where you
+want to place a link. Mine was something like
+`c:/Users/foobarbaz/AppData/Roaming/.emacs.d/init.el`. (**Hint**: Use
+[`xah-copy-file-path`](http://ergoemacs.org/emacs/emacs_copy_file_path.html)
+to make getting this path easy in Windows.)
 
 ## Remapping Caps Lock to Escape
 
