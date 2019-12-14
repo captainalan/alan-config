@@ -1,9 +1,6 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
-# caps lock bad
-xmodmap $HOME/.Xmodmap
-
 # Path to your oh-my-zsh installation.
 export ZSH="/home/alan/.oh-my-zsh"
 
