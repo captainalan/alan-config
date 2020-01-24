@@ -71,18 +71,20 @@ There are two things you can do about this warning:
 (define-key evil-emacs-state-map  (kbd ",o") 'other-frame)
 (define-key evil-normal-state-map (kbd ",n") 'neotree-toggle)
 (define-key evil-emacs-state-map  (kbd ",n") 'neotree-toggle)
-;; buffers and files
+;; Buffers and files
 (define-key evil-normal-state-map (kbd ",b") 'switch-to-buffer)
 (define-key evil-emacs-state-map  (kbd ",b") 'switch-to-buffer)
 (define-key evil-normal-state-map (kbd ",f") 'find-file)
 (define-key evil-emacs-state-map  (kbd ",f") 'find-file)
-;; window management
+;; Window management
+(define-key evil-normal-state-map (kbd ",0") 'delete-window)
+(define-key evil-emacs-state-map  (kbd ",0") 'delete-window)
 (define-key evil-normal-state-map (kbd ",1") 'delete-other-windows)
 (define-key evil-emacs-state-map  (kbd ",1") 'delete-other-windows)
 (define-key evil-normal-state-map (kbd ",2") 'split-window-below)
 (define-key evil-emacs-state-map  (kbd ",2") 'split-window-below)
-(define-key evil-normal-state-map (kbd ",3") 'new-window-on-right)
-(define-key evil-emacs-state-map  (kbd ",3") 'new-window-on-right)
+(define-key evil-normal-state-map (kbd ",3") 'split-window-right)
+(define-key evil-emacs-state-map  (kbd ",3") 'split-window-right)
 ;; Input method stuff
 (define-key evil-normal-state-map (kbd ",t") 'toggle-input-method)
 (define-key evil-emacs-state-map  (kbd ",t") 'toggle-input-method)
