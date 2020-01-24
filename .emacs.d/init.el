@@ -65,10 +65,33 @@ There are two things you can do about this warning:
 ;; =============================================================================
 ;; Binding some of the same keys I use with (neo)vim.
 (require 'neotree)
+
+(define-key evil-normal-state-map (kbd ",a") 'ace-window)
+(define-key evil-emacs-state-map  (kbd ",a") 'ace-window)
+(define-key evil-normal-state-map (kbd ",o") 'other-frame)
+(define-key evil-emacs-state-map  (kbd ",o") 'other-frame)
 (define-key evil-normal-state-map (kbd ",n") 'neotree-toggle)
+(define-key evil-emacs-state-map  (kbd ",n") 'neotree-toggle)
+;; buffers and files
+(define-key evil-normal-state-map (kbd ",b") 'switch-to-buffer)
+(define-key evil-emacs-state-map  (kbd ",b") 'switch-to-buffer)
+(define-key evil-normal-state-map (kbd ",f") 'find-file)
+(define-key evil-emacs-state-map  (kbd ",f") 'find-file)
+;; Input method stuff
+(define-key evil-normal-state-map (kbd ",t") 'toggle-input-method)
+(define-key evil-emacs-state-map  (kbd ",t") 'toggle-input-method)
+(define-key evil-normal-state-map (kbd ",i") 'set-input-method)
+(define-key evil-emacs-state-map  (kbd ",i") 'set-input-method)
+;; Evaluate code
+(define-key evil-normal-state-map (kbd ",e") 'eval-last-sexp)
 ;; Bookmarks
 (define-key evil-normal-state-map (kbd ",rb") 'bookmark-jump)
+(define-key evil-emacs-state-map  (kbd ",rb") 'bookmark-jump)
 (define-key evil-normal-state-map (kbd ",rm") 'bookmark-set)
+(define-key evil-emacs-state-map  (kbd ",rm") 'bookmark-set)
+;; Magit
+(define-key evil-normal-state-map (kbd ",g") 'magit-status)
+(define-key evil-emacs-state-map  (kbd ",g") 'magit-status)
 
 ;; Some modes to not start in normal mode
 (cl-loop for (mode . state)

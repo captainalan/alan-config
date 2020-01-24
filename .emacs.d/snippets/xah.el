@@ -1,4 +1,4 @@
-;; All code in this file from Xah Lee
+ All code in this file from Xah Lee
 ;; Go to ergoemacs.org for more.
 
 (defun xah-open-file-fast ()
