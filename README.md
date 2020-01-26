@@ -1,4 +1,5 @@
-# Config Files
+Config Files
+============
 
 Config files and scripts to set things up.
 
@@ -11,7 +12,6 @@ projects (Lubuntu, Xubuntu, etc.).
 
 Download and install [oh my zsh](https://github.com/ohmyzsh/ohmyzsh).
 
-=======
 ### Windows
 
 For now I am just manually
