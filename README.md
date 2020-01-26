@@ -1,4 +1,5 @@
-# Config Files
+Config Files
+============
 
 Config files and scripts to set things up.
 
@@ -8,6 +9,8 @@ Config files and scripts to set things up.
 
 The `muhbuntu.sh` shell script is for configuring Ubuntu and related
 projects (Lubuntu, Xubuntu, etc.).
+
+Download and install [oh my zsh](https://github.com/ohmyzsh/ohmyzsh).
 
 ### Windows
 
