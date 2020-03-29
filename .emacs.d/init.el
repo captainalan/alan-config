@@ -1,5 +1,7 @@
 ;; Load custom emacs code
 (load "~/.emacs.d/snippets/xah.el")
+(load "~/.emacs.d/lisp/my-abbrev.el")
+
 ;; Global keys for some useful xah commands
 (global-set-key (kbd "<f8>") 'xah-open-file-fast)
 
@@ -141,7 +143,7 @@ There are two things you can do about this warning:
  '(custom-enabled-themes (quote (cyberpunk)))
  '(custom-safe-themes
    (quote
-    ("59e82a683db7129c0142b4b5a35dbbeaf8e01a4b81588f8c163bd255b76f4d21" default)))
+    ("6bc387a588201caf31151205e4e468f382ecc0b888bac98b2b525006f7cb3307" "59e82a683db7129c0142b4b5a35dbbeaf8e01a4b81588f8c163bd255b76f4d21" default)))
  '(package-selected-packages
    (quote
     (neotree yaml-mode powerline powershell go-mode slime markdown-mode magit json-mode js2-mode evil elpy cyberpunk-theme clojure-mode ace-window)))
