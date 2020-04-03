@@ -87,14 +87,22 @@ There are two things you can do about this warning:
 (define-key evil-emacs-state-map  (kbd ",2") 'split-window-below)
 (define-key evil-normal-state-map (kbd ",3") 'split-window-right)
 (define-key evil-emacs-state-map  (kbd ",3") 'split-window-right)
+;; Frame management
+(define-key evil-normal-state-map (kbd ",52") 'make-frame)
+(define-key evil-emacs-state-map  (kbd ",52") 'make-frame)
+(define-key evil-normal-state-map (kbd ",5o") 'other-frame)
+(define-key evil-emacs-state-map  (kbd ",5o") 'other-frame)
+(define-key evil-normal-state-map (kbd ",50") 'delete-frame)
+(define-key evil-emacs-state-map  (kbd ",50") 'delete-frame)
+
 ;; Input method stuff
-(define-key evil-normal-state-map (kbd ",t") 'toggle-input-method)
-(define-key evil-emacs-state-map  (kbd ",t") 'toggle-input-method)
 (define-key evil-normal-state-map (kbd ",i") 'set-input-method)
 (define-key evil-emacs-state-map  (kbd ",i") 'set-input-method)
+
 ;; Evaluate code
 (define-key evil-normal-state-map (kbd ",e") 'eval-last-sexp)
 (define-key evil-normal-state-map (kbd ",v") 'eval-buffer)
+
 ;; Bookmarks
 (define-key evil-normal-state-map (kbd ",rb") 'bookmark-jump)
 (define-key evil-emacs-state-map  (kbd ",rb") 'bookmark-jump)
