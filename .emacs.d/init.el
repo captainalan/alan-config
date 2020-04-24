@@ -5,8 +5,10 @@
 ;; Global keys for some useful xah commands
 (global-set-key (kbd "<f8>") 'xah-open-file-fast)
 
-;; Unicode
-(prefer-coding-system 'utf-8-unix)
+;; UTF-8 as default encoding
+(set-language-environment "UTF-8")
+(set-default-coding-systems 'utf-8-unix)
+
 ;; MELPA Repository
 ;; ==================
 (require 'package)
