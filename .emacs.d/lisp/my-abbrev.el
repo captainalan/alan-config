@@ -7,6 +7,7 @@
 (define-abbrev-table 'global-abbrev-table
   '(
     ;; Diacritic chaos
+    ("china" "匚什工九凡")
     ("espanol" "español")
     ("naive" "naïve")
     ("Quebec" "Québec")

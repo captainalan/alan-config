@@ -249,39 +249,6 @@ Version 2019-11-10"
            (shell-command (format "brave \"%s\"" $fpath)))
          $file-list))))))
 
-(defun xah-html-open-in-brave ()
-  "Open the current file or `dired' marked files in Brave browser.
-If the file is not saved, save it first.
-Version 2019-11-10"
-  (interactive)
-  (let* (
-         ($file-list
-          (if (string-equal major-mode "dired-mode")
-              (dired-get-marked-files)
-            (list (buffer-file-name))))
-         ($do-it-p (if (<= (length $file-list) 5)
-                       t
-                     (y-or-n-p "Open more than 5 files? "))))
-    (when $do-it-p
-      (cond
-       ((string-equal system-type "darwin")
-        (mapc
-         (lambda ($fpath)
-           (shell-command (format "open -a 'Brave Browser.app' \"%s\"" $fpath)))
-         $file-list))
-       ((string-equal system-type "windows-nt")
-        ;; "C:\Program Files (x86)\Google\Chrome\Application\chrome.exe" 2019-11-09
-        (let ((process-connection-type nil))
-          (mapc
-           (lambda ($fpath)
-             (start-process "" nil "powershell" "start-process" "brave" $fpath ))
-           $file-list)))
-       ((string-equal system-type "gnu/linux")
-        (mapc
-         (lambda ($fpath)
-           (shell-command (format "brave \"%s\"" $fpath)))
-         $file-list))))))
-
 (defun xah-html-open-link-in-brave (&optional @fullpath)
   "open url under cursor in Brave browser.
 Work in Mac OS only
