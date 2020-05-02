@@ -14,6 +14,9 @@ if [ ! -f $HOME/.emacs.d/init.el  ]; then
 	if [ ! -d $HOME/.emacs.d/snippets ]; then
 		ln -s $THIS_DIR/.emacs.d/snippets ~/.emacs.d/
 	fi
+	if [ ! -d $HOME/.emacs.d/lisp ]; then
+		ln -s $THIS_DIR/.emacs.d/lisp ~/.emacs.d/
+	fi
 	# Add codes to automatically update packages, download things
 fi
 
