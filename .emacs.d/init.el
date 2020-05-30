@@ -85,6 +85,13 @@ There are two things you can do about this warning:
 (define-key evil-emacs-state-map  (kbd ",2") 'split-window-below)
 (define-key evil-normal-state-map (kbd ",3") 'split-window-right)
 (define-key evil-emacs-state-map  (kbd ",3") 'split-window-right)
+(define-key evil-normal-state-map (kbd ",52") 'make-frame-command)
+(define-key evil-emacs-state-map  (kbd ",52") 'make-frame-command)
+(define-key evil-normal-state-map (kbd ",5o") 'other-frame)
+(define-key evil-emacs-state-map  (kbd ",5o") 'other-frame)
+(define-key evil-normal-state-map (kbd ",50") 'delete-frame)
+(define-key evil-emacs-state-map  (kbd ",50") 'delete-frame)
+
 ;; Input method stuff
 (define-key evil-normal-state-map (kbd ",t") 'toggle-input-method)
 (define-key evil-emacs-state-map  (kbd ",t") 'toggle-input-method)
