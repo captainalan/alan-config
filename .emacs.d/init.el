@@ -278,22 +278,13 @@ Version 2019-11-05"
    '(#x4e00 . #x9fff)
    (cond
     ((member "Microsoft YaHei" (font-family-list)) "Microsoft YaHei")
-    ((member "PMingLiU" (font-family-list)) "PMingLiU")
-    ((member "SimHei" (font-family-list)) "SimHei")
-    ((member "Microsoft YaHei UI" (font-family-list)) "Microsoft YaHei UI")
-    ((member "MingLiU" (font-family-list)) "MingLiU")
-    ((member "SimHei" (font-family-list)) "SimHei")
-    ((member "DengXian" (font-family-list)) "DengXian")
-    ((member "KaiTi" (font-family-list)) "KaiTi")
-    ((member "SimSun" (font-family-list)) "SimSun"))))
+    ((member "Microsoft JhengHei" (font-family-list)) "Microsoft JhengHei")
+    ((member "SimHei" (font-family-list)) "SimHei"))))
  ((string-equal system-type "darwin")
   (cond
+   ((member "Hei" (font-family-list)) "Hei")
    ((member "Heiti SC" (font-family-list)) "Heiti SC")
-   ((member "Heiti TC" (font-family-list)) "Heiti TC")
-   ((member "Songti SC" (font-family-list)) "Songti SC")
-   ((member "Songti TC" (font-family-list)) "Songti TC")
-   ((member "Kaiti SC" (font-family-list)) "Kaiti SC")
-   ((member "BiauKai" (font-family-list)) "BiauKai")))
+   ((member "Heiti TC" (font-family-list)) "Heiti TC")))
  ((string-equal system-type "gnu/linux")
   (cond
    ((member "WenQuanYi Micro Hei" (font-family-list)) "WenQuanYi Micro Hei"))))
@@ -481,3 +472,17 @@ Version 2017-11-10"
           (rename-buffer "eww" t)))))
 
   (add-hook 'eww-after-render-hook 'xah-rename-eww-buffer))
+(custom-set-variables
+ ;; custom-set-variables was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ '(package-selected-packages
+   (quote
+    (racket-mode powershell powerline-evil neotree markdown-mode magit js2-mode haskell-mode go-mode gitignore-mode elpy elfeed cyberpunk-theme ace-window))))
+(custom-set-faces
+ ;; custom-set-faces was added by Custom.
+ ;; If you edit it by hand, you could mess it up, so be careful.
+ ;; Your init file should contain only one such instance.
+ ;; If there is more than one, they won't work right.
+ )
