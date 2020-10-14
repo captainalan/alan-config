@@ -63,14 +63,11 @@ There are two things you can do about this warning:
 ;; Leader-like functionality using ,(comma)
 ;; =============================================================================
 ;; Binding some of the same keys I use with (neo)vim.
-(require 'neotree)
 
 (define-key evil-normal-state-map (kbd ",a") 'ace-window)
 (define-key evil-emacs-state-map  (kbd ",a") 'ace-window)
 (define-key evil-normal-state-map (kbd ",o") 'other-frame)
 (define-key evil-emacs-state-map  (kbd ",o") 'other-frame)
-(define-key evil-normal-state-map (kbd ",n") 'neotree-toggle)
-(define-key evil-emacs-state-map  (kbd ",n") 'neotree-toggle)
 ;; Buffers and files
 (define-key evil-normal-state-map (kbd ",b") 'switch-to-buffer)
 (define-key evil-emacs-state-map  (kbd ",b") 'switch-to-buffer)
@@ -479,10 +476,4 @@ Version 2017-11-10"
  ;; If there is more than one, they won't work right.
  '(package-selected-packages
    (quote
-    (racket-mode powershell powerline-evil neotree markdown-mode magit js2-mode haskell-mode go-mode gitignore-mode elpy elfeed cyberpunk-theme ace-window))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- )
+    (magit markdown-mode powerline-evil elpy ace-window))))
