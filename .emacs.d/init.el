@@ -267,24 +267,24 @@ Version 2019-11-05"
  ;;
  )
 
-(cond
- ;; specify font for chinese characters
- ((string-equal system-type "windows-nt")
-  (set-fontset-font
-   t
-   '(#x4e00 . #x9fff)
+;; set font for chinese characters
+(set-fontset-font
+ t
+ '(#x4e00 . #x9fff)
+ (cond
+  ((string-equal system-type "windows-nt")
    (cond
     ((member "Microsoft YaHei" (font-family-list)) "Microsoft YaHei")
     ((member "Microsoft JhengHei" (font-family-list)) "Microsoft JhengHei")
-    ((member "SimHei" (font-family-list)) "SimHei"))))
- ((string-equal system-type "darwin")
-  (cond
-   ((member "Hei" (font-family-list)) "Hei")
-   ((member "Heiti SC" (font-family-list)) "Heiti SC")
-   ((member "Heiti TC" (font-family-list)) "Heiti TC")))
- ((string-equal system-type "gnu/linux")
-  (cond
-   ((member "WenQuanYi Micro Hei" (font-family-list)) "WenQuanYi Micro Hei"))))
+    ((member "SimHei" (font-family-list)) "SimHei")))
+  ((string-equal system-type "darwin")
+   (cond
+    ((member "Hei" (font-family-list)) "Hei")
+    ((member "Heiti SC" (font-family-list)) "Heiti SC")
+    ((member "Heiti TC" (font-family-list)) "Heiti TC")))
+  ((string-equal system-type "gnu/linux")
+   (cond
+    ((member "WenQuanYi Micro Hei" (font-family-list)) "WenQuanYi Micro Hei")))))
 
 ;; (progn
 ;;   ;; use variable-width font for some modes
